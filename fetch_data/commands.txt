@@ -1,0 +1,3 @@
+docker exec -it mongodb mongosh
+use products
+db.products.find()
