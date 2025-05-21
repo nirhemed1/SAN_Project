@@ -2,20 +2,33 @@
 
 ## 📌 Description
 
-SAN Project is a full-stack web application designed as an online shop for computer equipment, similar to websites like KSP. The system supports product browsing, user registration, login, admin product management, and more.
+SAN_Project is a simple e-commerce web application designed to manage products, users, and orders.  
+The backend is built with Node.js and Express, using MongoDB for data storage.
 
----
+## Project Overview
 
-## 📐 Architecture Overview
+This project provides a RESTful API that allows clients to perform CRUD operations on products, users, and orders. The system is modular and scalable, following best practices in API design and project organization.
 
-- **Frontend**: React.js
-  - Component-based UI
-  - Axios for API communication
-- **Backend**: Node.js + Express
-  - RESTful API
-  - JWT-based authentication
-- **Database**: MongoDB
-  - Mongoose ORM
-- **Authentication**: JSON Web Tokens (JWT)
-- **Routing**: React Router (Client), Express Router (Server)
-- **File Structure**:
+## Architecture
+
+The backend follows the MVC (Model-View-Controller) pattern:
+
+- **Models**: Define the structure of the data using Mongoose.  
+  Examples: Product, User, Order.
+
+- **Controllers**: Handle the business logic and interact with the database.  
+  Each controller processes requests and returns the appropriate response.
+
+- **Routes**: Define the API endpoints and route requests to the correct controller functions.  
+  Organized by resource type (e.g., `/api/products`, `/api/users`).
+
+- **Server**: The `server.js` file initializes the Express app, connects to the database, and mounts all routes.
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JavaScript
+
